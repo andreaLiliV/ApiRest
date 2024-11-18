@@ -1,0 +1,55 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>localizacion</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Localizacion</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <!--
+
+  <ion-list>
+
+    
+
+    
+
+    <ion-item *ngFor="let localizacion of localizaciones">
+      {{localizacion.id}}
+      {{localizacion.latitud}}
+      {{localizacion.longitude}}
+    </ion-item>
+
+    <div *ngIf="userPosition">
+      <p>Latitud: {{ userPosition.lat }}</p>
+      <p>Latitud: {{ userPosition.lng }}</p>
+    </div>   
+
+
+  </ion-list>
+
+  <div id="map" style="height: 100%;"></div>
+
+-->
+
+
+<div *ngIf="latitude && longitude" class="datos-container">
+  <h3>Tu ubicación actual</h3>
+  <p>Latitud: <span class="dato">{{latitude}}</span></p>
+  <p>Longitud: <span class="dato">{{longitude}}</span></p>
+</div>
+
+<div *ngIf="userUbicacion" class="datos-container">
+  <h3>Ubicación del usuario</h3>
+  <p>Nombre: <span class="dato">{{userUbicacion.nombre}}</span></p>
+  <p>Latitud: <span class="dato">{{userUbicacion.latitud}}</span></p>
+  <p>Longitud: <span class="dato">{{userUbicacion.longitud}}</span></p>
+</div>
+
+
+</ion-content>

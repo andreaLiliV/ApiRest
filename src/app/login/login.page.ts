@@ -89,6 +89,18 @@ registrar(){
 }
 
 
+localizar(){
+
+  //Sólo a modo de prueba  
+  let navigationExtras: NavigationExtras = {
+    state:{
+      
+    }
+  }
+  this.router.navigate(['/localizacion'], navigationExtras);
+}
+
+
 
 }
 
